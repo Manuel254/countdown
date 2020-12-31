@@ -3,6 +3,7 @@ let hours = document.getElementById('hours');
 let minutes = document.getElementById('mins');
 let seconds = document.getElementById('sec');
 let par = document.querySelector('p');
+let div = document.querySelector('#particles-js');
 
 setInterval(() => {
     const newYear = new Date(2021,00,01);
@@ -24,10 +25,12 @@ setInterval(() => {
 
     if (remTime === 0){
         par.textContent = 'HAPPY NEW YEAR!!!';
+        par.style.textAlign = 'center';
     }else {
+        div.style.display = 'none';
         days.textContent = d;
         hours.textContent = h;
         minutes.textContent = m;
-        seconds.textContent = s;
+        seconds.textContent = s; 
     }
 }, 1000);
