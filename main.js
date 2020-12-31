@@ -8,7 +8,8 @@ let div = document.querySelector('#particles-js');
 setInterval(() => {
     const newYear = new Date(2021,00,01);
     const current = new Date();
-    let remTime = newYear.getTime() - current.getTime();
+    // let remTime = newYear.getTime() - current.getTime();
+    let remTime = 0;
 
     let s = Math.floor(remTime / 1000);
     let m = Math.floor(s / 60);
