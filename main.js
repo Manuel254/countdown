@@ -2,6 +2,7 @@ let days = document.getElementById('days');
 let hours = document.getElementById('hours');
 let minutes = document.getElementById('mins');
 let seconds = document.getElementById('sec');
+let par = document.querySelector('p');
 
 setInterval(() => {
     const newYear = new Date(2021,00,01);
@@ -21,8 +22,12 @@ setInterval(() => {
     m = (m < 10) ? '0' + m : m;
     s = (s < 10) ? '0' + s : s;
 
-    days.textContent = d;
-    hours.textContent = h;
-    minutes.textContent = m;
-    seconds.textContent = s;
+    if (remTime === 0){
+        par.textContent = 'HAPPY NEW YEAR!!!';
+    }else {
+        days.textContent = d;
+        hours.textContent = h;
+        minutes.textContent = m;
+        seconds.textContent = s;
+    }
 }, 1000);
