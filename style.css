@@ -69,23 +69,27 @@ footer {
 
 @media (max-width: 480px) {
     #particles-js {
-        top: -50%;
-        height: 200%;
+        top: -100%;
+        height: 100vh;
     }
     .container {
         margin:50% auto;
     }
     h2 {
+        position: absolute;
+        top: -50%;
         font-size: 1.5em;
+        margin: 0;
     }
     p {
-        font-size:2.5em;
+        margin: 5% 0;
+        font-size:1.5em;
     }
     #days,
     #hours,
     #mins,
     #sec {
-        padding: .5rem;
+        padding: .3rem;
         margin:1rem .5rem;
     }
 

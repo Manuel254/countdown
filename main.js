@@ -6,10 +6,9 @@ let par = document.querySelector('p');
 let div = document.querySelector('#particles-js');
 
 setInterval(() => {
-    const newYear = new Date(2021,00,01);
+    const newYear = new Date(2021,03,22);
     const current = new Date();
-    // let remTime = newYear.getTime() - current.getTime();
-    let remTime = 0;
+    let remTime = newYear.getTime() - current.getTime();
 
     let s = Math.floor(remTime / 1000);
     let m = Math.floor(s / 60);
@@ -24,8 +23,8 @@ setInterval(() => {
     m = (m < 10) ? '0' + m : m;
     s = (s < 10) ? '0' + s : s;
 
-    if (remTime === 0){
-        par.textContent = 'HAPPY NEW YEAR!!!';
+    if (remTime === 0 || remTime < 0){
+        par.textContent = 'HAPPY BIRTHDAY BABY BOO ❤️';
         par.style.textAlign = 'center';
     }else {
         div.style.display = 'none';
